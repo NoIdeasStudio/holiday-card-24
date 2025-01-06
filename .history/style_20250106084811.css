@@ -136,7 +136,7 @@
             }
 
             .movement-video>img{
-              height: 100%;
+              height: 105%;
               width: auto;
               position: relative;
               z-index: -2;
@@ -264,6 +264,7 @@
                 grid-row: 14 / 16;
                 vertical-align: bottom;
                 padding: 0%;
+                height: ;
                 
             }
             .img-2{
@@ -523,9 +524,9 @@
   .movement-video{
     background-color: transparent;
     grid-column: col-start 2 / span 4;
-    grid-row: 2 / 12 ;
+    grid-row: 2 / 13 ;
     align-items: center;
-    padding-left: 5%;
+    padding-left: 0%;
 }
 .movement-video>img{
   height: 110%;
@@ -543,9 +544,9 @@
   .movement-video{
     background-color: transparent;
     grid-column: col-start 1 / span 6;
-    grid-row: 2 / 12 ;
+    grid-row: 2 / 13 ;
     align-items: center;
-    padding-left: 5%;
+    padding-left: 0%;
 }
 .movement-video>img{
   height: 110%;
