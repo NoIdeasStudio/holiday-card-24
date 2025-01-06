@@ -214,6 +214,8 @@
   
   @media (max-width: 1070px) {
 
+
+  
     .wrapper {
         height: 100vh;
         width: 100vw;
@@ -235,17 +237,6 @@
         grid-column: col-start 2 / span 4;
         padding: .5em;
         grid-row: 4 / 6;
-      }
-
-      .large-text{
-        font: 1.75em Helvetica, arial, sans-serif;
-      }
-      .large-text-light{
-        font: 1.75em Helvetica, arial, sans-serif;
-        color: #FF0000;
-      }
-      .small-text{
-        font: .9em Helvetica, arial, sans-serif;
       }
 
       .header-1{
