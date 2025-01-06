@@ -120,28 +120,12 @@ function calculateDayOfYear() {
   
   setTimeout(() => {
     document.getElementById('gif').style.display = 'none';
-  }, 20000); // Stop displaying after 20 seconds
+  }, 20000); // Stop displaying after 5 seconds
   
-
+  let gif = 
   document.querySelector("#movement-name").addEventListener("click", function(){
     document.getElementById('gif').style.display = "block";
-
-    setTimeout(() => {
-    document.getElementById('gif').style.display = 'none';
-  }, 20000);
   })
-
-  
-  // Check if the screen width is greater than or equal to 900px
-  if (window.matchMedia("(min-width: 900px)").matches) {
-    // Set timeout to hide the GIF after 20 seconds
-    document.getElementById('gif').style.display = "block";
-
-    setTimeout(() => {
-    document.getElementById('gif').style.display = 'block';
-  }, 2000);
-  }
-
   
   </script>
 </html>

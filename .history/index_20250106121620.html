@@ -118,30 +118,20 @@ function calculateDayOfYear() {
   const today = new Date();
   const totalDays = isLeapYear(today.getFullYear()) ? 366 : 365;
   
-  setTimeout(() => {
-    document.getElementById('gif').style.display = 'none';
-  }, 20000); // Stop displaying after 20 seconds
+  document.querySelector("#movement-name").addEventListener("click", function() {
+  const gifElement = document.getElementById('gif');
   
-
-  document.querySelector("#movement-name").addEventListener("click", function(){
-    document.getElementById('gif').style.display = "block";
-
-    setTimeout(() => {
-    document.getElementById('gif').style.display = 'none';
-  }, 20000);
-  })
-
-  
-  // Check if the screen width is greater than or equal to 900px
-  if (window.matchMedia("(min-width: 900px)").matches) {
+  if (gifElement.style.display === "block") {
+    gifElement.style.display = "none";
+  } else {
+    gifElement.style.display = "block";
+    
     // Set timeout to hide the GIF after 20 seconds
-    document.getElementById('gif').style.display = "block";
-
     setTimeout(() => {
-    document.getElementById('gif').style.display = 'block';
-  }, 2000);
+      gifElement.style.display = 'none';
+    }, 20000);
   }
-
+});
   
   </script>
 </html>

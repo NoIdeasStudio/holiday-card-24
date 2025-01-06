@@ -78,7 +78,7 @@
 
 
 
-        <footer class="large-text content-footer-3" id="movement-name">5 Digits Tip to Tip</footer>
+        <footer class="large-text content-footer-3">5 Digits Tip to Tip</footer>
         <footer class="large-text content-footer-4"><a href="./exercise-2.html">Next</a></footer>
 
     </div>
@@ -120,28 +120,8 @@ function calculateDayOfYear() {
   
   setTimeout(() => {
     document.getElementById('gif').style.display = 'none';
-  }, 20000); // Stop displaying after 20 seconds
+  }, 12000); // Stop displaying after 5 seconds
   
-
-  document.querySelector("#movement-name").addEventListener("click", function(){
-    document.getElementById('gif').style.display = "block";
-
-    setTimeout(() => {
-    document.getElementById('gif').style.display = 'none';
-  }, 20000);
-  })
-
-  
-  // Check if the screen width is greater than or equal to 900px
-  if (window.matchMedia("(min-width: 900px)").matches) {
-    // Set timeout to hide the GIF after 20 seconds
-    document.getElementById('gif').style.display = "block";
-
-    setTimeout(() => {
-    document.getElementById('gif').style.display = 'block';
-  }, 2000);
-  }
-
   
   </script>
 </html>

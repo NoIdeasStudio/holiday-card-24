@@ -131,17 +131,21 @@ function calculateDayOfYear() {
   }, 20000);
   })
 
+  document.querySelector("#movement-name").addEventListener("click", function() {
+  const gifElement = document.getElementById('gif');
+  
+  gifElement.style.display = "block"; // Show the GIF
   
   // Check if the screen width is greater than or equal to 900px
-  if (window.matchMedia("(min-width: 900px)").matches) {
+  if (window.matchMedia("(max-width: 900px)").matches) {
     // Set timeout to hide the GIF after 20 seconds
     document.getElementById('gif').style.display = "block";
 
     setTimeout(() => {
-    document.getElementById('gif').style.display = 'block';
-  }, 2000);
+    document.getElementById('gif').style.display = 'blo';
+  }, 20000);
   }
-
+});
   
   </script>
 </html>

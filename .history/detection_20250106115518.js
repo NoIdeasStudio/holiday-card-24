@@ -1,5 +1,3 @@
-
-
 const videoElement = document.querySelector('.input_video');
 
 function resizeVideo() {

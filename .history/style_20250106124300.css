@@ -539,7 +539,6 @@
     grid-row: 3 / 13 ;
     align-items: center;
     justify-content: center; 
-    display: flex;
 }
 .movement-video>img{
   height: 110%;
