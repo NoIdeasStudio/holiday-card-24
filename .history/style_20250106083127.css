@@ -135,13 +135,6 @@
                 grid-row: 3 / 16 ;
             }
 
-            .movement-video>img{
-              height: 105%;
-              width: auto;
-              position: relative;
-              z-index: -2;
-            }
-
             .content-info{
                 grid-column: col-start 3 / span 3;
                 grid-row: 3 / 16 ;

@@ -175,6 +175,7 @@ handsModel.onResults(onResults);
 
 
 
+
 function calculateDayOfYear() {
   const today = new Date();
   const startOfYear = new Date(today.getFullYear(), 0, 1); // January 1st of the current year

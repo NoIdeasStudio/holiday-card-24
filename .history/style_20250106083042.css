@@ -135,13 +135,6 @@
                 grid-row: 3 / 16 ;
             }
 
-            .movement-video>img{
-              height: 105%;
-              width: auto;
-              position: relative;
-              z-index: -2;
-            }
-
             .content-info{
                 grid-column: col-start 3 / span 3;
                 grid-row: 3 / 16 ;
@@ -538,11 +531,11 @@
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
 
   .movement-video{
     background-color: transparent;
-    grid-column: col-start 1 / span 6;
+    grid-column: col-start 2 / span 4;
     grid-row: 2 / 13 ;
     align-items: center;
     padding-left: 0%;

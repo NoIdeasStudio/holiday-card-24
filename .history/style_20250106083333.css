@@ -136,9 +136,10 @@
             }
 
             .movement-video>img{
-              height: 105%;
+              height: 100%;
               width: auto;
               position: relative;
+              
               z-index: -2;
             }
 
