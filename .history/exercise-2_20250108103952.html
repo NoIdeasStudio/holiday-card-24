@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise-1</title>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script defer language="javascript" type="text/javascript" src="detection.js"></script>
+    <script defer language="javascript" type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <body>
+
+
+    <div class="wrapper">
+
+        <div class="container">
+            <video class="input_video"></video>
+            <canvas class="output_canvas"></canvas>
+          </div>
+
+        <!-- landmarks -->
+        <div id="wrist-div-0" class="landmark-div large-text"></div>
+        <div id="mcp-div-0-0" class="landmark-div large-text"></div>
+        <div id="mcp-div-0-1" class="landmark-div large-text"></div>
+        <div id="mcp-div-0-2" class="landmark-div large-text"></div>
+        <div id="mcp-div-0-3" class="landmark-div large-text"></div>
+        <div id="mcp-div-0-4" class="landmark-div large-text"></div>
+        <div id="mcp-div-0-5" class="landmark-div large-text"></div>
+        <div id="tip-div-0-0" class="landmark-div large-text"></div>
+        <div id="tip-div-0-1" class="landmark-div large-text"></div>
+        <div id="tip-div-0-2" class="landmark-div large-text"></div>
+        <div id="tip-div-0-3" class="landmark-div large-text"></div>
+        <div id="tip-div-0-4" class="landmark-div large-text"></div>
+        <div id="tip-div-0-5" class="landmark-div large-text"></div>
+        <div id="wrist-div-1" class="landmark-div large-text"></div>
+        <div id="mcp-div-1-0" class="landmark-div large-text"></div>
+        <div id="mcp-div-1-1" class="landmark-div large-text"></div>
+        <div id="mcp-div-1-2" class="landmark-div large-text"></div>
+        <div id="mcp-div-1-3" class="landmark-div large-text"></div>
+        <div id="mcp-div-1-4" class="landmark-div large-text"></div>
+        <div id="mcp-div-1-5" class="landmark-div large-text"></div>
+        <div id="tip-div-1-0" class="landmark-div large-text"></div>
+        <div id="tip-div-1-1" class="landmark-div large-text"></div>
+        <div id="tip-div-1-2" class="landmark-div large-text"></div>
+        <div id="tip-div-1-3" class="landmark-div large-text"></div>
+        <div id="tip-div-1-4" class="landmark-div large-text"></div>
+        <div id="tip-div-1-5" class="landmark-div large-text"></div>
+
+        <header class="small-text header-1">day <span id="day-counter">Loading...</span></header>
+        <header class="small-text header-2">5 Digit-al Exercises for graphic designers.</header>
+        <header class="small-text header-3"><a href="./info.html">Info</a></header>
+       
+        <!-- Preview, illustrations of the exercises -->
+        <content class="large-text content-header-1">Preview</content>
+                <div class="img-2"><img src="./Svgs/exercise-2-1.svg" alt="Tendon Glides" height="100%" width="100%" /></div>
+                <div class="img-3"><img src="./Svgs/exercise-2-2.svg" alt="Tendon Glides" height="100%" width="100%" /></div>
+        <footer class="large-text content-footer-1"><a class="no-underline" href="./movements.html">5x 5x</a></footer>
+        <footer class="large-text content-footer-2"><a class="no-underline" href="./movements.html">L R</a></footer>
+
+        <!-- Movement, videos of the movement -->
+        <content class="large-text content-header-2"><a href="http://">Movement</a></content>
+                <div class="movement-video"> <img id="gif" src="./Gifs/Tendon-Glides.gif" alt="Tendon Glides" height="100%" width="100%" /></div>
+        <content class="large-text content-header-3">2/5</content>
+        <content class="large-text content-header-4"><a href="./index.html">Back</a></content>
+
+
+
+        <footer class="large-text content-footer-3" id="movement-name">Tendon Glides</footer>
+        <footer class="large-text content-footer-4"><a href="./exercise-3.html">Next</a></footer>
+
+    </div>
+    
+</body>
+
+<script>
+
+function calculateDayOfYear() {
+    const today = new Date();
+    const startOfYear = new Date(today.getFullYear(), 0, 1); // January 1st of the current year
+    const diff = today - startOfYear; // Difference in milliseconds
+    const oneDay = 1000 * 60 * 60 * 24; // Number of milliseconds in one day
+  
+    return Math.floor(diff / oneDay) + 1; // Day number, add 1 to start from Day 1
+  }
+  
+  // Function to check for leap year
+  function isLeapYear(year) {
+    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+  }
+  
+  // Get the current year and set the total days (365 or 366 based on leap year)
+  const today = new Date();
+  const totalDays = isLeapYear(today.getFullYear()) ? 366 : 365;
+  
+  setTimeout(() => {
+    document.getElementById('gif').style.display = 'none';
+  }, 8000); // Stop displaying after 20 seconds
+  
+
+  document.querySelector("#movement-name").addEventListener("click", function(){
+    document.getElementById('gif').style.display = "block";
+
+    setTimeout(() => {
+    document.getElementById('gif').style.display = 'none';
+  }, 8000);
+  })
+
+  document.querySelector("body").addEventListener("click", function(){
+    document.getElementById('gif').style.display = "block";
+
+    setTimeout(() => {
+    document.getElementById('gif').style.display = 'none';
+  }, 8000);
+  })
+
+    // Select the GIF element
+const gif = document.getElementById('gif');
+
+// Set GIF duration (in milliseconds) and loop count
+const gifDuration = 10000; // Duration for one loop (adjust as needed)
+const loopCount = 2;
+let currentLoops = 0;
+let gifTimer = null;
+const gifSrc = gif.src; // Store the original src
+
+// Function to play the GIF
+function playGif() {
+    gif.style.display = 'block';
+    gif.src = ''; // Clear the src to force a reload
+    gif.src = gifSrc; // Reassign the original src to restart the GIF
+    currentLoops = 0;
+    
+    // Set an interval to track loops and hide the GIF after 2 loops
+    gifTimer = setInterval(() => {
+        currentLoops++;
+        if (currentLoops >= loopCount) {
+            gif.style.display = 'none';
+            clearInterval(gifTimer);
+        }
+    }, gifDuration);
+}
+
+// Add an event listener to the body to trigger GIF play on click
+document.body.addEventListener('click', playGif);
+
+  
+//   // Check if the screen width is greater than or equal to 900px
+//   if (window.matchMedia("(min-width: 900px)").matches) {
+//     // Set timeout to hide the GIF after 20 seconds
+//     document.getElementById('gif').style.display = "block";
+
+//     setTimeout(() => {
+//     document.getElementById('gif').style.display = 'block';
+//   }, 5000);
+//   }
+
+</script>
+
+</html>
