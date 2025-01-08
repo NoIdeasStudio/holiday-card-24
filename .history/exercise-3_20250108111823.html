@@ -80,7 +80,13 @@
     window.addEventListener("load", function () {
         // Show popup after 1 second
         setTimeout(function open(event) {
+            document.querySelector(".popup").style.display = "block";
         }, 1000);
+  
+        // Handle 'Got it' button click
+        document.querySelector("#got-it").addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "none";
+        });
   
         // Function to calculate the day of the year
         function calculateDayOfYear() {
@@ -100,11 +106,11 @@
         const today = new Date();
         const totalDays = isLeapYear(today.getFullYear()) ? 366 : 365;
         const dayOfYear = calculateDayOfYear();
-        document.getElementById('day-counter').textContent = `${dayOfYear} / ${totalDays}`;
+        document.getElementById('day-counter').textContent = `${dayOfYear} of ${totalDays}`;
   
         // GIF functionality
         const gif = document.getElementById('gif');
-        const gifDuration = 3050; // Duration of one loop (in milliseconds)
+        const gifDuration = 10000; // Duration of one loop (in milliseconds)
         const loopCount = 2;
         const totalDuration = gifDuration * loopCount;
         const gifSrc = gif.src;

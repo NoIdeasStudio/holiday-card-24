@@ -80,7 +80,13 @@
     window.addEventListener("load", function () {
         // Show popup after 1 second
         setTimeout(function open(event) {
+            document.querySelector(".popup").style.display = "block";
         }, 1000);
+  
+        // Handle 'Got it' button click
+        document.querySelector("#got-it").addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "none";
+        });
   
         // Function to calculate the day of the year
         function calculateDayOfYear() {

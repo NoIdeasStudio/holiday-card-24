@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exercise-3</title>
+    <title>exercise-1</title>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <body>
+
 
     <div class="wrapper">
 
@@ -55,22 +58,21 @@
        
         <!-- Preview, illustrations of the exercises -->
         <content class="large-text content-header-1">Preview</content>
-                <div class="img-2"><img src="./Svgs/exercise-3-1.svg" alt="Wrist Twists" height="100%" width="100%" /></div>
-                <div class="img-3"><img src="./Svgs/exercise-3-2.svg" alt="Wrist Twists" height="100%" width="100%" /></div>
-              
+                <div class="img-2"><img src="./Svgs/exercise-2-1.svg" alt="Tendon Glides" height="100%" width="100%" /></div>
+                <div class="img-3"><img src="./Svgs/exercise-2-2.svg" alt="Tendon Glides" height="100%" width="100%" /></div>
         <footer class="large-text content-footer-1"><a class="no-underline" href="./movements.html">5x 5x</a></footer>
         <footer class="large-text content-footer-2"><a class="no-underline" href="./movements.html">L R</a></footer>
 
         <!-- Movement, videos of the movement -->
         <content class="large-text content-header-2"><a href="http://">Movement</a></content>
-            <div class="movement-video"> <img id="gif" src="./Gifs/Wrist-Twists.gif" alt="Wrist Twists"/></div>
-        <content class="large-text content-header-3">3/5</content>
-        <content class="large-text content-header-4"><a href="./exercise-2.html">Back</a></content>
+                <div class="movement-video"> <img id="gif" src="./Gifs/Tendon-Glides.gif" alt="Tendon Glides" height="100%" width="100%" /></div>
+        <content class="large-text content-header-3">2/5</content>
+        <content class="large-text content-header-4"><a href="./index.html">Back</a></content>
 
 
 
-        <footer class="large-text content-footer-3" id="movement-name">Wrist Twists</footer>
-        <footer class="large-text content-footer-4"><a href="./exercise-4.html">Next</a></footer>
+        <footer class="large-text content-footer-3" id="movement-name">Tendon Glides</footer>
+        <footer class="large-text content-footer-4"><a href="./exercise-3.html">Next</a></footer>
 
     </div>
     
@@ -80,7 +82,13 @@
     window.addEventListener("load", function () {
         // Show popup after 1 second
         setTimeout(function open(event) {
+            document.querySelector(".popup").style.display = "block";
         }, 1000);
+  
+        // Handle 'Got it' button click
+        document.querySelector("#got-it").addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "none";
+        });
   
         // Function to calculate the day of the year
         function calculateDayOfYear() {
@@ -100,11 +108,11 @@
         const today = new Date();
         const totalDays = isLeapYear(today.getFullYear()) ? 366 : 365;
         const dayOfYear = calculateDayOfYear();
-        document.getElementById('day-counter').textContent = `${dayOfYear} / ${totalDays}`;
+        document.getElementById('day-counter').textContent = `${dayOfYear} of ${totalDays}`;
   
         // GIF functionality
         const gif = document.getElementById('gif');
-        const gifDuration = 3050; // Duration of one loop (in milliseconds)
+        const gifDuration = 3950; // Duration of one loop (in milliseconds)
         const loopCount = 2;
         const totalDuration = gifDuration * loopCount;
         const gifSrc = gif.src;

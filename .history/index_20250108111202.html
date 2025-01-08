@@ -88,62 +88,61 @@
     
 </body>
 <script>
-  window.addEventListener("load", function () {
-      // Show popup after 1 second
-      setTimeout(function open(event) {
-          document.querySelector(".popup").style.display = "block";
-      }, 1000);
-
-      // Handle 'Got it' button click
-      document.querySelector("#got-it").addEventListener("click", function () {
-          document.querySelector(".popup").style.display = "none";
-      });
-
-      // Function to calculate the day of the year
-      function calculateDayOfYear() {
-          const today = new Date();
-          const startOfYear = new Date(today.getFullYear(), 0, 1); // January 1st
-          const diff = today - startOfYear; // Difference in milliseconds
-          const oneDay = 1000 * 60 * 60 * 24; // Number of milliseconds in one day
-          return Math.floor(diff / oneDay) + 1; // Day number
-      }
-
-      // Function to check for leap year
-      function isLeapYear(year) {
-          return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
-      }
-
-      // Calculate and display the current day and total days
-      const today = new Date();
-      const totalDays = isLeapYear(today.getFullYear()) ? 366 : 365;
-      const dayOfYear = calculateDayOfYear();
-      document.getElementById('day-counter').textContent = `${dayOfYear} / ${totalDays}`;
-
-      // GIF functionality
-      const gif = document.getElementById('gif');
-      const gifDuration = 10000; // Duration of one loop (in milliseconds)
-      const loopCount = 2;
-      const totalDuration = gifDuration * loopCount;
-      const gifSrc = gif.src;
-
-      // Function to play the GIF
-      function playGif() {
-          gif.style.display = 'block';
-          gif.src = '';        // Clear the src to force a reload
-          gif.src = gifSrc;    // Reassign the original src to restart the GIF
-
-          // Hide the GIF after 2 loops
-          setTimeout(() => {
-              gif.style.display = 'none';
-          }, totalDuration);
-      }
-
-      // Play GIF on body click
-      document.body.addEventListener('click', playGif);
-
-      // Call playGif on page load
-      playGif();
+    window.addEventListener("load", function(){
+    setTimeout(
+        function open(event){
+            document.querySelector(".popup").style.display = "block";
+        },
+        1000
+    )
   });
-</script>
+  document.querySelector("#got-it").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+  });
+  
+function calculateDayOfYear() {
+    const today = new Date();
+    const startOfYear = new Date(today.getFullYear(), 0, 1); // January 1st of the current year
+    const diff = today - startOfYear; // Difference in milliseconds
+    const oneDay = 1000 * 60 * 60 * 24; // Number of milliseconds in one day
+  
+    return Math.floor(diff / oneDay) + 1; // Day number, add 1 to start from Day 1
+  }
+  
+  // Function to check for leap year
+  function isLeapYear(year) {
+    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+  }
+  
+  // Get the current year and set the total days (365 or 366 based on leap year)
+  const today = new Date();
+  const totalDays = isLeapYear(today.getFullYear()) ? 366 : 365;
+  
 
+  const gif = document.getElementById('gif');
+
+// Set GIF duration (in milliseconds) and loop count
+const gifDuration = 10000; // Adjust this to match the duration of one loop of your GIF
+const loopCount = 2;
+const totalDuration = gifDuration * loopCount;
+const gifSrc = gif.src; // Store the original src
+
+// Function to play the GIF
+function playGif() {
+    gif.style.display = 'block';
+    gif.src = '';        // Clear the src to force a reload
+    gif.src = gifSrc;    // Reassign the original src to restart the GIF
+
+    // Hide the GIF automatically after the total duration (2 loops)
+    setTimeout(() => {
+        gif.style.display = 'none';
+    }, totalDuration);
+}
+
+// Add an event listener to the body to trigger GIF play on click
+document.body.addEventListener('click', playGif);
+
+// Call playGif immediately on page load
+window.onload = playGif;
+</script>
 </html>
