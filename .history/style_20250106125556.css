@@ -214,9 +214,6 @@
   
   @media (max-width: 900px) {
 
-    canvas{
-      display: none;
-    }
     .wrapper {
         height: 100vh;
         width: 100vw;
@@ -315,13 +312,13 @@
             grid-row: 3 / 13 ;
             justify-content: center;
             display: flex;
+            /* padding-left: 5%; */
         }
         .movement-video>img{
           height: 110%;
           width: auto;
           justify-content: center; 
           z-index: -2;
-          padding-left: 5%;
         }
             
         .content-info{
@@ -533,6 +530,7 @@
 
 
 @media (max-width: 600px) {
+
   .movement-video{
     background-color: transparent;
     grid-column: col-start 1 / span 6;

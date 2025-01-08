@@ -111,8 +111,8 @@ function onResults(results) {
 
 // Handle MCP points (indices 1, 5, 9, 13, 17) individually
 const mcp1 = landmarks[2];
-const mcpDivId1 = `mcp-div-${handIndex}-1`;
-positionLandmarkDiv(mcp1, mcpDivId1, `mcp-${handIndex}-1`, "a");
+const mcpDivId1 = `mcp-div-${handIndex}-2`;
+positionLandmarkDiv(mcp1, mcpDivId1, `mcp-${handIndex}-2`, "a");
 
 const mcp2 = landmarks[5];
 const mcpDivId2 = `mcp-div-${handIndex}-2`;
