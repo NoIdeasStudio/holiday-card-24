@@ -4,10 +4,10 @@
     color: #8D0000;
     margin: 0%;
     padding: 0%;
-    
+    back
   }
   body{
-    background-color: #FF0000;
+    background-color: transparent;
   }
   .wrapper {
     height: 100vh;
