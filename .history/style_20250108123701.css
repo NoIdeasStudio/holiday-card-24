@@ -211,6 +211,15 @@
     text-align: right;
   }
 
+  .img-2-E>img{
+    grid-column: col-start 3 / span 1;
+    grid-row: 11 / 13;
+    vertical-align: bottom;
+   position: absolute;
+   right: 3%;
+    
+}
+
   
   @media (max-width: 900px) {
 
