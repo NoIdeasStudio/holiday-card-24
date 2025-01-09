@@ -74,7 +74,7 @@
  .underline:hover{
     text-decoration: underline dashed ;
     text-underline-offset: .15em;
-    cursor: pointer;
+    cursor: inherit;
   }
   a.no-underline:hover{
     text-decoration: none;
