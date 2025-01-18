@@ -229,19 +229,19 @@
       height: 120%;
       width: auto;
       z-index: -2;
-      padding-top: 3%;
+      padding-top: 5%;
       justify-content: center;
     }
     
     .large-text{
-      font: 2.4em Helvetica, arial, sans-serif;
+      font: 3em Helvetica, arial, sans-serif;
     }
     .large-text-light{
-      font: 2.4em Helvetica, arial, sans-serif;
+      font: 3em Helvetica, arial, sans-serif;
       color: #FF0000;
     }
     .small-text{
-      font: 1.4em Helvetica, arial, sans-serif;
+      font: 1.5em Helvetica, arial, sans-serif;
     }
     
     }
